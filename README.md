@@ -44,12 +44,14 @@ usage:
     ```
     $ java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -r \(iphone\|htc\) -d /tmp/test.dot -o /tmp/test.blif
     ```
+    
     **注意:** 此處原先的正規表達式為`(iphone|htc)`，但是在Command Line 當中必須使用`\`符號來跳脫Command Line特殊字元 `|`,`(`,`)`, 因此結果變成`\(iphone\|htc\)`
 
 * 正規表達式接受**任意字**(任意字元出現任意次數)
     ```
     java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -r .\* -d /tmp/test.dot -o /tmp/test.blif
     ```
+    
     **注意:** 此處原先的正規表達式為`.*`，但是在Command Line 當中必須使用`\`符號來跳脫Command Line特殊字元 `*`, 因此結果變成`.\*`
 
 * 正規表達式接受任意字元出現一次以上
@@ -62,12 +64,14 @@ usage:
     ```
     java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -r .\? -d /tmp/test.dot -o /tmp/test.blif
     ```
+    
     **注意:** `?`表示出現零次或者一次。此處原先的正規表達式為`.?`，但是在Command Line 當中必須使用`\`符號來跳脫Command Line特殊字元 `?`, 因此結果變成`.\?`
 
 * 正規表達式接受任意字元出現3~5次
     ```
     java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -r .\{3,5\} -d /tmp/test.dot -o /tmp/test.blif
     ```
+    
     **注意:** 此處原先的正規表達式為`.{3,5}`，但是在Command Line 當中必須使用`\`符號來跳脫Command Line特殊字元 `{`,`}`, 因此結果變成`.\{3,5\}`
 
 * 正規表達式接受任意字元出現5次以上
@@ -90,12 +94,14 @@ usage:
     ```
     java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -r \# -d /tmp/test.dot -o /tmp/test.blif
     ```
+    
     **注意:** 用來表達Empty Language的正規表達式原先為`#`，但是在Command Line 當中必須使用`\`符號來跳脫Command Line特殊字元 `#`, 因此結果變成`\#`。 另外，如果要表達原始的`#`字元，則需使用兩次跳脫字元`\\\#`來表達一個井字: 前兩條`\\`代表一次`\`，最後一條`\`則是用來跳脫`#`。
 
 ## Log 層級調整
 可以在Command Line 當中使用`-l`參數來調整Log資訊層級。
 
 * 使用`FATAL`層級會使得程式只會在嚴重出錯時才會印出Log, 其餘正常運作的情況下，不會有任何Log:
+
 ```
 $ java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -l FATAL -r apple -d /tmp/test.dot -o /tmp/test.blif
 ```
