@@ -57,7 +57,9 @@ usage:
     ```
     java -jar target/regex2blif-0.0.1-SNAPSHOT.jar -r .+ -d /tmp/test.dot -o /tmp/test.blif
     ```
+    
     正規表達式`+`表示字元出現一次以上
+    
 
 * 正規表達式接受任意字元出現零次或者一次:
     ```
