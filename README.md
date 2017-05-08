@@ -34,10 +34,9 @@ usage:
     ```
     以上 `-r`參數後面接的是正規表達式，`-o`參數後面接的是輸出BLIF檔的位置。 `-d` 參數可省略，表示輸出一份該正規表達式的State-Transition Diagram 的[Graphviz](http://www.graphviz.org/)圖檔。
 
- > 詳細的正規表達式文法，請參閱[此處](http://www.brics.dk/automaton/doc/index.html)
- 
-
- > 可以把生成的`*.dot` Graphviz 圖檔內容，複製貼上到[WebGraphviz](http://www.webgraphviz.com/) 網站來即時繪製圖檔
+ > 1.詳細的正規表達式文法，請參閱[此處](http://www.brics.dk/automaton/doc/index.html)
+ 
+ > 2.可以把生成的`*.dot` Graphviz 圖檔內容，複製貼上到[WebGraphviz](http://www.webgraphviz.com/) 網站來即時繪製圖檔
 
 
 * 正規表達式只接受`iphone`或者`htc`兩個單字
