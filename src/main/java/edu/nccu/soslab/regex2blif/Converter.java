@@ -137,8 +137,7 @@ public class Converter
 	    }
 	    printer.println(" t");
 
-	    String[][] dontCareTable = generateDontCareTable();
-	    logger.debug("dontCareTable = " + dontCareTable);
+	    
 	    char max = (char) (Math.pow(2, bitPerChar) - 1);
 
 	    for (State srcState : regexAuto.getStates())
@@ -228,21 +227,6 @@ public class Converter
 	return StringUtils.leftPad(Integer.toBinaryString(number), length, padChar);
     }
 
-    private String[][] generateDontCareTable()
-    {
-	String[][] retVal = new String[bitPerChar][bitPerChar];
-	for (int i = 0; i < bitPerChar; i++)
-	{
-	    for (int j = i; j < bitPerChar; j++)
-	    {
-
-		retVal[i][j] = String.join("", Collections.nCopies(bitPerChar - (j + 1), "0")) + String.join("", Collections.nCopies((j + 1) - (i + 1) + 1, "-"))
-			+ String.join("", Collections.nCopies(bitPerChar - ((bitPerChar - (j + 1) + ((j + 1) - (i + 1) + 1))), "0"));
-	    }
-
-	}
-	return retVal;
-
-    }
+    
 
 }
