@@ -25,10 +25,10 @@ public class App
 	Options options = new Options();
 //	options.addOption(OptionBuilder.withLongOpt("integer-option").withDescription("description").withType(Number.class).hasArg().withArgName("argname").create());
 	options.addOption(Option.builder("r").longOpt("regex").desc("regular expression").type(String.class).hasArg().required().build());
-	options.addOption(Option.builder("b").longOpt("bits-per-char").desc("bits per character").type(Integer.class).hasArg().required(false).build());
-	options.addOption(Option.builder("d").longOpt("dot").desc("output graphviz dotty format file").type(String.class).hasArg().required(false).build());
+	options.addOption(Option.builder("b").longOpt("bits-per-char").desc("bits per character. Default: 8").type(Integer.class).hasArg().required(false).build());
+	options.addOption(Option.builder("d").longOpt("dot").desc("output graphviz dotty format file. (Optional)").type(String.class).hasArg().required(false).build());
 	options.addOption(Option.builder("o").longOpt("output").desc("output BLIF file").type(String.class).hasArg().required().build());
-	options.addOption(Option.builder("m").longOpt("model-name").desc("BLIF model names. Must set with -o option").type(String.class).hasArg().required(false).build());
+	options.addOption(Option.builder("m").longOpt("model-name").desc("BLIF model name. Must set with -o option. Default: 'regex'").type(String.class).hasArg().required(false).build());
 	
 	options.addOption(Option.builder("l").longOpt("log-level").desc("Log level: DEBUG, INFO, WARN, ERROR, FATAL").type(String.class).hasArg().required(false).build());
 		
